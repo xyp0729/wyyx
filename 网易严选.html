@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网易严选</title>
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px; 
+		}
+		html,body,.main{
+			width: 100%;
+			height: 100%;
+		}
+		/*最顶部*/
+		.top{
+			width: 100%;
+			height: 36px;
+			background-color: #000;
+			/*overflow: hidden;*/
+		}
+		/*头部小喇叭*/
+		.top_left{
+			width: 300px;
+			height: 36px;
+			line-height: 36px;
+			/*background-color: yellow;*/
+			margin-left: 21.5%;
+			font-size: 12px;
+			color: #CC9756;
+		}
+		/*头部登录....*/
+		.top_right{
+			width: 380px;
+			height: 36px;
+			line-height: 36px;
+			/*background-color: green;*/
+			float: right;
+			margin-right: 21.5%;
+			margin-top: -36px;
+			font-size: 12px;
+			color: #ccc;
+			cursor: pointer;
+		}
+		.top_right>ul>li{
+			list-style: none;
+			float: left;
+		}
+		.header{
+			width: 100%;
+			height: 140px;
+			/*background-color: pink;*/
+		}
+		.header_top{
+			width: 1090px;
+			height: 60%;
+			margin: 0 auto;
+			/*background-color: red;*/
+			overflow: hidden;
+		}
+		/*logo*/
+		.header_top>div:first-child{
+			margin-top: 10px;
+			float: left;
+			cursor: pointer;
+		}
+		/*搜索部分*/
+		.header_top>div:nth-child(3){
+			width: 50%;
+			height: 100%;
+			/*background-color: yellow;*/
+			float: right;
+			margin-top: 18px;
+			margin-right: 30px;
+		}
+		/*搜索框下方文字*/
+		.header_top>div:nth-child(3)>div:nth-child(3){
+			font-size: 12px;
+			color: #CC9756;
+			margin-left: 15px;
+			cursor: pointer;
+		}
+		/*搜索框*/
+		.search_text{
+			width: 81.1%;
+			height: 45px;
+			float: left;
+			/*margin-right: 20%;*/
+			border-top-left-radius: 30px;
+			border-bottom-left-radius: 30px;
+			border:1px solid #cc9756;
+		}
+		/*搜索按钮*/
+		.search_button{
+			width: 18.5%;
+			height: 38px;
+			background-color: #CC9756;
+			color: #fff;
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			float: right;			
+			text-align: center;
+			padding-top: 9px;
+			font: 16px/1.5 "Microsoft Yahei","微软雅黑",verdana;
+			cursor: pointer;
+		}
+		/*购物车*/
+		.shopcar{
+			width: 134px;
+			height: 38px;
+			/*background-color: yellow;*/
+			float: right;
+			color: #cc9756;
+			text-align: center;
+			font: 16px/1.5 "Microsoft Yahei","微软雅黑",verdana;
+			border:1px solid #cc9756;
+			border-radius: 50px;
+			margin-top:15px;
+			padding-top: 6px;
+			cursor: pointer;
+		}		
+		.header_bottom{
+			width: 1090px;
+			height: 25px;
+			margin:0 auto;
+			margin-top: 30px;
+			/*background-color: teal;*/
+		}
+		.header_bottom>ul{
+			width: 1000px;
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.header_bottom li{
+			list-style: none;
+			font-size: 14px;
+			font-weight: bold;
+			cursor: pointer;
+			text-align: center;
+			/*line-height: 90px;*/
+		}
+		.header_bottom li:hover{
+			border-bottom: 2px solid #CC9756;
+			color: #CC9756;
+		}
+		/*轮播图*/
+		.image{
+			width: 100%;
+			height: 420px;
+			/*background-color: yellow;*/
+			background-image: url('网易严选imgs/1.webp');
+			background-size: 100% 100%;
+			margin:0 auto;
+			animation-name: lunbo_head;
+			animation-duration: 14s;
+			animation-iteration-count: infinite;
+			cursor: pointer;			
+		}
+		@keyframes lunbo_head{
+			0%{
+				background-image: url('网易严选imgs/1.webp');
+			}
+			16.6%{
+				background-image: url('网易严选imgs/2.webp');
+			}
+			33.3%{
+				background-image: url('网易严选imgs/3.webp');
+			}
+			49.9%{
+				background-image: url('网易严选imgs/4.webp');
+			}
+			66.6%{
+				background-image: url('网易严选imgs/5.webp');
+			}
+			83.3%{
+				background-image: url('网易严选imgs/6.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/7.webp');
+			}
+		}
+		/*中间内容*/
+		.content{
+			width: 100%;
+		}
+		.content_one,.content_two,.content_three,.content_san,.content_twelve,.content_thirteen{
+			position: relative;
+			width: 100%;
+			height: 550px;
+		}		
+		.item{
+			width: 1090px;
+			height: 510px;
+			/*background-color: gray;*/
+			position: relative;
+			left: 0px;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			margin:0 auto;
+		}
+		.content_two{
+
+			background-color: #f4f0ea;
+		}
+		.content_two>.item{
+			width: 1090px;
+			height: 525px;
+			background-color: #fff;
+		}
+		/*4-11内容布局*/
+		.content_four,.content_five,.content_six,.content_seven,.content_eight,.content_nine,.content_ten,.content_eleven{
+			position: relative;
+			width: 100%;
+			height: 830px;
+		}
+		.content_four>.item,.content_five>.item,.content_six>.item,.content_seven>.item,.content_eight>.item,.content_nine>.item,.content_ten>.item,.content_eleven>.item{
+			width: 1090px;
+			height: 790px;
+			/*background-color: gray;*/
+			position: relative;
+			left: 0px;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			margin:0 auto;
+		}
+
+		/*每部分头部*/
+		.item>div:first-child{
+			width: 100%;
+			height: 50px;
+			/*background-color: red;*/
+			padding-top:20px;
+		}
+		.content_two>.item>div:first-child{
+			background-color: #f4f0ea;
+		}
+		/*每部分标题*/
+		.item>div:first-child>div:first-child{			
+			margin-left: 20px;
+			font-size: 30px;
+			font-weight: bold;
+			float: left;
+		}
+		/*查看更多*/
+		.content_four_top>div:nth-child(2),.content_five_top>div:nth-child(2),.content_six_top>div:nth-child(2),.content_seven_top>div:nth-child(2),.content_eight_top>div:nth-child(2),.content_nine_top>div:nth-child(2),.content_ten_top>div:nth-child(2),.content_eleven_top>div:nth-child(2){
+				float: right; 
+				margin-top: 15px;
+		}
+		/*第一部分,第二部分,第十二部分，第十三部分标题后文字标题后文字*/
+		.content_one_top>div:nth-child(2),.content_two_top>div:nth-child(2),.content_two_top>div:nth-child(3),.content_twelve_top>div:nth-child(2),.content_thirteen_top>div:nth-child(2){
+			float: left;
+			margin-left: 20px;
+			padding-top: 15px;
+			color: #333333;
+		}
+		/*1-3头部末尾*/
+		.content_one_top>div:last-child,.content_two_top>div:last-child,.content_three_top>div:last-child,.content_san_top>div:last-child{
+			float: right;
+			padding-top: 15px;
+		}	
+		/*第一部分的图片*/
+		.content_one_bottom{
+			width: 100%;
+			height: 460px;
+			background-color: white;
+		}
+		.content_one_bottom>ul{
+			display: flex;
+		}	
+		.content_one_bottom>ul>li{
+			width: 24%;
+			height: 100%;
+			flex: 10px 1 10px;
+			margin:0 auto;		
+		}
+		.content_one_bottom>ul>li>div:first-child{
+			width: 265px;
+			height: 265px;			
+			background-size: 100% 100%;
+			background-color: #F4F4F4;
+		}
+		.content_one_bottom1{
+			background-image: url('网易严选imgs/xinpin_11.webp');
+			transition: all 0.5s linear;
+		}
+		.content_one_bottom1:hover{
+			background-image: url('网易严选imgs/xinpin_12.webp');
+		}
+		.content_one_bottom2{
+			background-image: url('网易严选imgs/xinpin_21.webp');
+			transition: all 0.5s linear;
+		}
+		.content_one_bottom2:hover{
+			background-image: url('网易严选imgs/xinpin_22.webp');
+		}
+		.content_one_bottom3{
+			background-image: url('网易严选imgs/xinpin_31.webp');
+			transition: all 0.5s linear;
+		}
+		.content_one_bottom3:hover{
+			background-image: url('网易严选imgs/xinpin_32.webp');
+		}
+		.content_one_bottom4{
+			background-image: url('网易严选imgs/xinpin_41.webp');
+			transition: all 0.5s linear;
+		}
+		.content_one_bottom4:hover{
+			background-image: url('网易严选imgs/xinpin_42.webp');
+		}
+		.content_one_bottom>ul>li>div:last-child{
+			width: 265px;
+			height: 180px;
+			/*background-color: red;*/
+			margin:0 auto;
+		}
+		.content_one_bottom>ul>li>div:last-child>div:first-child{
+			text-align: center;
+			box-sizing: border-box;
+			padding: 5px;
+			color: #fff;
+		}
+		.content_one_bottom>ul>li>div:last-child>div:first-child>span:first-child{
+			background-color: #F28F2D;
+			font-size: 13px;
+			padding: 2px;
+			/*border:5px solid;*/
+		}
+		.content_one_bottom>ul>li>div:last-child>div:first-child>span:last-child{
+			background-color: #e36844;
+			font-size: 13px;
+			padding: 2px;
+			/*border:5px solid;*/
+		}
+		.content_one_bottom>ul>li>div:last-child>div:nth-child(2){
+			text-align: center;
+			font-weight: bold;
+			font-size: 13px;
+
+		}
+		.content_one_bottom>ul>li>div:last-child>p{
+			width: 265px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			color: red;	
+			margin-top: 5px;
+		}
+		.content_one_bottom>ul>li>div:last-child>p>span:last-child{
+			color:#999;
+			font-size: 14px;
+			text-decoration: line-through;
+			top: 2px;
+		}
+		/*第二部分内容*/
+		.content_two_bottom_left{
+			width: 318px;
+			height: 465px;
+			/*opacity: 0.5;*/
+			/*background-color: red;*/
+			float: left;
+			border-right:2px solid #f4f0ea;
+
+		}
+		.content_two_bottom_left>div:nth-child(2){
+			text-align: center;
+			box-sizing: border-box;
+			padding: 5px;
+			color: #fff;
+			margin-top: 10px;
+
+		}
+		.content_two_bottom_left>div:nth-child(2)>span{
+			background-color: #e36844;
+			font-size: 13px;
+			padding: 2px;
+			/*border:5px solid;*/
+		}
+		.content_two_bottom_left>div:nth-child(3){
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+			margin-top: 10px;
+			
+		}
+		.content_two_bottom_left>p{
+			width: 327px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			color: red;	
+			margin-top: 10px;
+		}
+		.content_two_bottom_left>p>span:last-child{
+			color:#999;
+			font-size: 14px;
+			text-decoration: line-through;
+			top: 2px;
+		}
+		.content_two_bottom_right{
+			width: 760px;
+			height: 470px;
+			/*background-color: yellow;*/
+			float: right;
+		}
+		.content_two_bottom_right>div:first-child,.content_two_bottom_right>div:last-child{
+			width: 100%;
+			height: 220px;
+			/*background-color: purple;*/
+		}
+		.content_two_bottom_right>div:first-child>ul,.content_two_bottom_right>div:last-child>ul{
+			display: flex;
+		}
+		.content_two_bottom_right>div:first-child>ul>li,.content_two_bottom_right>div:last-child>ul>li{
+			width: 24%;
+			height: 100%;
+			flex: 10px 1 10px;
+			margin:0 auto;
+			border-right:2px solid #f4f0ea;
+			border-bottom:2px solid #f4f0ea;
+
+		}
+		.content_two_bottom_right>div:first-child>ul>li>img,.content_two_bottom_right>div:last-child>ul>li>img{
+				width: 180px;
+				height: 180px;
+				transition: all 2s	linear;
+		}
+		.content_two_bottom_right>div:first-child>ul>li>div:nth-child(2),.content_two_bottom_right>div:last-child>ul>li>div:nth-child(2){
+			text-align: center;
+			box-sizing: border-box;
+			color: #fff;
+			/*border-top:2px solid #f4f0ea;*/
+			}
+		.content_two_bottom_right>div:first-child>ul>li>div:nth-child(2)>span,.content_two_bottom_right>div:last-child>ul>li>div:nth-child(2)>span{
+			background-color: #e36844;
+			font-size: 13px;
+			padding: 2px;
+		}
+		.content_two_bottom_right>div:first-child>ul>li>div:nth-child(3),.content_two_bottom_right>div:last-child>ul>li>div:nth-child(3){
+			text-align: center;
+			font-weight: bold;
+			font-size: 13px;			
+		}
+		.content_two_bottom_right>div:first-child>ul>li>p,.content_two_bottom_right>div:last-child>ul>li>p{
+			width: 180px;
+			height: 15px;
+			line-height: 15px;
+			font-size: 13px;
+			text-align: center;
+			color: red;	
+		}
+		.content_two_bottom_right>div:first-child>ul>li>p>span:last-child,.content_two_bottom_right>div:last-child>ul>li>p>span:last-child{
+			color:#999;
+			font-size: 13px;
+			text-decoration: line-through;
+			top: 2px;
+		}
+		/*限时购内容*/
+		.content_san_bottom_left{
+			width: 230px;
+			height: 440px;
+			/*opacity: 0.5;*/
+			/*background-color: red;*/
+			float: left;
+			background-image: url('网易严选imgs/xianshi_1.png');
+			background-size: 100% 100%;
+			/*border-right:2px solid #f4f0ea;*/
+		}
+		.content_san_bottom_right{
+			width: 860px;
+			height: 440px;
+			/*background-color: yellow;*/
+			float: right;
+		}
+		.content_san_bottom_right>div:first-child,.content_san_bottom_right>div:last-child{
+			width: 100%;
+			height: 220px;
+			/*background-color: purple;*/
+		}
+		.content_san_bottom_right>div:first-child>ul,.content_san_bottom_right>div:last-child>ul{
+			display: flex;
+		}
+		.content_san_bottom_right>div:first-child>ul>li,.content_san_bottom_right>div:last-child>ul>li{
+			width: 24%;
+			height: 100%;
+			flex: 1;
+			margin:0 auto;
+			/*border:2px solid #f4f0ea; */
+		}
+		.content_san_bottom_right>div:first-child>ul>li>div,.content_san_bottom_right>div:last-child>ul>li>div{
+			border:2px solid #f4f0ea;
+		}
+		.content_san_bottom_right>div:first-child>ul>li>img,.content_san_bottom_right>div:last-child>ul>li>img{
+				width: 430px;
+				height: 110px;
+				/*background-size: 100% 100%;*/
+
+		}
+		/*第三部分内容*/
+		.content_three_bottom_left{
+			width: 230px;
+			height: 440px;
+			/*opacity: 0.5;*/
+			/*background-color: red;*/
+			float: left;
+		}
+		.content_three_bottom_right{
+			width: 860px;
+			height: 440px;
+			/*background-color: yellow;*/
+			float: right;
+		}
+		.content_three_bottom_right>div:first-child,.content_three_bottom_right>div:last-child{
+			width: 100%;
+			height: 220px;
+			/*background-color: purple;*/
+		}
+		.content_three_bottom_right>div:first-child>ul,.content_three_bottom_right>div:last-child>ul{
+			display: flex;
+		}
+		.content_three_bottom_right>div:first-child>ul>li,.content_three_bottom_right>div:last-child>ul>li{
+			width: 24%;
+			height: 100%;
+			flex: 1;
+			margin:0 auto;
+		}
+			
+		.content_three_bottom_right>div:first-child>ul>li>div,.content_three_bottom_right>div:last-child>ul>li>div{
+			border:2px solid #f4f0ea;
+		}
+		.content_three_bottom_right>div:first-child>ul>li>img,.content_three_bottom_right>div:last-child>ul>li>img{
+				width: 180px;
+				height: 180px;
+		}
+
+		/*4-11每部分导航栏*/
+		.content_four_top>div:last-child,.content_five_top>div:last-child,.content_six_top>div:last-child,.content_seven_top>div:last-child,.content_eight_top>div:last-child,.content_nine_top>div:last-child,.content_ten_top>div:last-child,.content_eleven_top>div:last-child{
+				float: right;
+				margin-right: 20px;
+				margin-top: 15px;
+		}
+		li{
+			list-style: none;
+		}
+		.content_four_top>div:last-child>ul,.content_five_top>div:last-child>ul,.content_six_top>div:last-child>ul,.content_seven_top>div:last-child>ul,.content_eight_top>div:last-child>ul,.content_nine_top>div:last-child>ul,.content_ten_top>div:last-child>ul,.content_eleven_top>div:last-child>ul{
+		}
+		.content_four_top>div:last-child>ul>li,.content_five_top>div:last-child>ul>li,.content_six_top>div:last-child>ul>li,.content_seven_top>div:last-child>ul>li,.content_eight_top>div:last-child>ul>li,.content_nine_top>div:last-child>ul>li,.content_ten_top>div:last-child>ul>li,.content_eleven_top>div:last-child>ul>li{
+			float: left;	
+		}
+		.content_four_top>div:last-child>ul>li>span,.content_five_top>div:last-child>ul>li>span,.content_six_top>div:last-child>ul>li>span,.content_seven_top>div:last-child>ul>li>span,.content_eight_top>div:last-child>ul>li>span,.content_nine_top>div:last-child>ul>li>span,.content_ten_top>div:last-child>ul>li>span,.content_eleven_top>div:last-child>ul>li>span{
+				padding-left: 5px;
+				padding-right: 5px;
+		}
+		/*4-11轮播图*/
+		.content_four_bottom_top,.content_five_bottom_top,.content_six_bottom_top,.content_seven_bottom_top,.content_eight_bottom_top,.content_nine_bottom_top,.content_ten_bottom_top,.content_eleven_bottom_top{
+			width: 100%;
+			height: 310px;
+			/*background-color: yellow;*/
+			background-size: 100% 100%;
+		}
+		.content_four_bottom_top{
+			background-image: url('网易严选imgs/jujia_lunbo_1.webp');			
+			animation-name: lunbo_four;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_four{
+			0%{
+				background-image: url('网易严选imgs/jujia_lunbo_1.webp');
+			}
+			50%{
+				background-image: url('网易严选imgs/jujia_lunbo_2.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/jujia_lunbo_3.webp');			
+			}
+		}
+		.content_five_bottom_top{
+			background-image: url('网易严选imgs/fushi_lunbo_1.webp');			
+			animation-name: lunbo_five;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_five{
+			0%{
+				background-image: url('网易严选imgs/fushi_lunbo_1.webp');
+			}
+			50%{
+				background-image: url('网易严选imgs/fushi_lunbo_2.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/fushi_lunbo_3.webp');			
+			}
+		}.content_six_bottom_top{
+			background-image: url('网易严选imgs/meishi_lunbo_1.webp');			
+			animation-name: lunbo_six;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_six{
+			0%{
+				background-image: url('网易严选imgs/meishi_lunbo_1.webp');
+			}
+			25%{
+				background-image: url('网易严选imgs/meishi_lunbo_2.webp');
+			}
+			50%{
+				background-image: url('网易严选imgs/meishi_lunbo_3.webp');			
+			}
+			75%{
+				background-image: url('网易严选imgs/meishi_lunbo_4.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/meishi_lunbo_5.webp');
+			}
+		}
+		.content_seven_bottom_top{
+			background-image: url('网易严选imgs/gehu_lunbo_1.webp');			
+			animation-name: lunbo_seven;
+			animation-duration: 12s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_seven{
+			0%{
+				background-image: url('网易严选imgs/gehu_lunbo_1.webp');
+			}
+			20%{
+				background-image: url('网易严选imgs/gehu_lunbo_2.webp');
+			}
+			40%{
+				background-image: url('网易严选imgs/gehu_lunbo_3.webp');
+			}
+			60%{
+				background-image: url('网易严选imgs/gehu_lunbo_4.webp');
+			}
+			80%{
+				background-image: url('网易严选imgs/gehu_lunbo_5.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/gehu_lunbo_6.webp');			
+			}
+		}
+		.content_eight_bottom_top{
+			background-image: url('网易严选imgs/muying_lunbo_1.webp');			
+			animation-name: lunbo_eight;
+			animation-duration: 8s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_eight{
+			0%{
+				background-image: url('网易严选imgs/muying_lunbo_1.webp');
+			}
+			33.3%{
+				background-image: url('网易严选imgs/muying_lunbo_2.webp');
+			}
+			66.6%{
+				background-image: url('网易严选imgs/muying_lunbo_。3.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/muying_lunbo_4.webp');			
+			}
+		}
+		.content_nine_bottom_top{
+			background-image: url('网易严选imgs/yundong_lunbo_1.webp');			
+			animation-name: lunbo_nine;
+			animation-duration: 8s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_nine{
+			0%{
+				background-image: url('网易严选imgs/yundong_lunbo_1.webp');
+			}
+			33.3%{
+				background-image: url('网易严选imgs/yundong_lunbo_2.webp');
+			}
+			66.6%{
+				background-image: url('网易严选imgs/yundong_lunbo_3.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/yundong_lunbo_4.webp');			
+			}
+		}
+		.content_ten_bottom_top{
+			background-image: url('网易严选imgs/shuma_lunbo_1.webp');			
+			animation-name: lunbo_ten;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_ten{
+			0%{
+				background-image: url('网易严选imgs/shuma_lunbo_1.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/shuma_lunbo_3.webp');			
+			}
+		}
+		.content_eleven_bottom_top{
+			background-image: url('网易严选imgs/yanxuan_lunbo_1.webp');			
+			animation-name: lunbo_eleven;
+			animation-duration: 6s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes lunbo_eleven{
+			0%{
+				background-image: url('网易严选imgs/yanxuan_lunbo_1.webp');
+			}
+			50%{
+				background-image: url('网易严选imgs/yanxuan_lunbo_2.webp');
+			}
+			100%{
+				background-image: url('网易严选imgs/yanxuan_lunbo_3.webp');			
+			}
+		}
+		.content_four_bottom_bottom,.content_five_bottom_bottom,.content_six_bottom_bottom,.content_seven_bottom_bottom,.content_eight_bottom_bottom,.content_nine_bottom_bottom,.content_ten_bottom_bottom,.content_eleven_bottom_bottom{
+			width: 100%;
+			height: 410px;
+			/*opacity: 0.5;*/
+			/*background-color: purple;*/
+
+		}
+		.content_four_bottom_bottom>ul,.content_five_bottom_bottom>ul,.content_six_bottom_bottom>ul,.content_seven_bottom_bottom>ul,.content_eight_bottom_bottom>ul,.content_nine_bottom_bottom>ul,.content_ten_bottom_bottom>ul,.content_eleven_bottom_bottom>ul{
+			display: flex;
+		}
+		.content_four_bottom_bottom>ul>li,.content_five_bottom_bottom>ul>li,.content_six_bottom_bottom>ul>li,.content_seven_bottom_bottom>ul>li,.content_eight_bottom_bottom>ul>li,.content_nine_bottom_bottom>ul>li,.content_ten_bottom_bottom>ul>li,.content_eleven_bottom_bottom>ul>li{
+			width: 24%;
+			height: 100%;
+			flex:10px 1 10px;
+			margin:0  auto;
+		}
+		.content_four_bottom_bottom>ul>li>div>img,.content_five_bottom_bottom>ul>li>div>img,.content_six_bottom_bottom>ul>li>div>img,.content_seven_bottom_bottom>ul>li>div>img,.content_eight_bottom_bottom>ul>li>div>img,.content_nine_bottom_bottom>ul>li>div>img,.content_ten_bottom_bottom>ul>li>div>img,.content_eleven_bottom_bottom>ul>li>div>img{
+			width: 265px;
+			height: 265px;
+			background-color: #F4F4F4;
+		}
+		/*4-11图片下方文字介绍		*/
+		.content_four_bottom_bottom>ul>li>div:nth-child(2),.content_five_bottom_bottom>ul>li>div:nth-child(2),.content_six_bottom_bottom>ul>li>div:nth-child(2),.content_seven_bottom_bottom>ul>li>div:nth-child(2),.content_eight_bottom_bottom>ul>li>div:nth-child(2),.content_nine_bottom_bottom>ul>li>div:nth-child(2),.content_ten_bottom_bottom>ul>li>div:nth-child(2),.content_eleven_bottom_bottom>ul>li>div:nth-child(2){
+			width: 262px;
+			height:92px; 
+		}	
+		.content_four_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_five_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_six_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_seven_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_eight_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_nine_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_ten_bottom_bottom>ul>li>div:nth-child(2)>div:first-child,.content_eleven_bottom_bottom>ul>li>div:nth-child(2)>div:first-child{
+				width: 262px;
+				height: 20px;
+				display: flex;
+				justify-content: center;
+		}
+		.content_four_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_five_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_six_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_seven_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_eight_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_nine_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_ten_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span,.content_eleven_bottom_bottom>ul>li>div:nth-child(2)>div:first-child>span{
+				background-color: #e36844;
+				font-size: 13px;
+				padding: 2px;
+		}	
+		.content_four_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_five_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_six_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_seven_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_eight_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_nine_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_ten_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2),.content_eleven_bottom_bottom>ul>li>div:nth-child(2)>div:nth-child(2){
+				height: 35px;
+				text-align: center;
+				margin-top: 5px;
+				font-weight: bold;
+				font-size: 13px;
+		}
+		.content_four_bottom_bottom>ul>li>div:nth-child(2)>p,.content_five_bottom_bottom>ul>li>div:nth-child(2)>p,.content_six_bottom_bottom>ul>li>div:nth-child(2)>p,.content_seven_bottom_bottom>ul>li>div:nth-child(2)>p,.content_eight_bottom_bottom>ul>li>div:nth-child(2)>p,.content_nine_bottom_bottom>ul>li>div:nth-child(2)>p,.content_ten_bottom_bottom>ul>li>div:nth-child(2)>p,.content_eleven_bottom_bottom>ul>li>div:nth-child(2)>p{
+				width: 262px;
+				height: 20px;
+				line-height: 15px;
+				font-size: 13px;
+				text-align: center;
+				margin-top: 5px;
+				color: red;
+		}
+		.content_twelve_bottom_left{
+			width: 690px;
+			height: 380px;
+			/*background-color: red;*/
+			float: left;
+			background-image: url('网易严选imgs/zhenxuan_1.webp');
+			background-size: 100% 100%;
+		}
+		.content_twelve_bottom_right{
+			width: 390px;
+			height: 380px;
+			/*background-color: yellow;*/
+			float: right;
+		}
+		.content_twelve_bottom_right>div:first-child{
+			width: 390px;
+			height: 185px;
+			/*background-color: red;*/
+			background-image: url('网易严选imgs/zhenxuan_2.webp');
+			background-size: 100% 100%;
+		}
+		.content_twelve_bottom_right>div:last-child{
+			margin-top: 10px;
+			width: 390px;
+			height: 185px;
+			/*background-color: red;*/
+			background-image: url('网易严选imgs/zhenxuan_3.webp');
+			background-size: 100% 100%;
+		}
+		/*尾部*/
+		.footer{
+			width: 100%;
+			height: 549px;
+			/*background: #000;*/
+		}
+		/*尾部的上方*/
+		.footer_top{
+			width: 1090px;
+			height: 50%;
+			/*background-color: red;*/
+			margin:0 auto;
+			display: flex;
+
+		}
+		/*尾部上方统一设置格式	*/
+		.footer_top_one>div:first-child,.footer_top_two>div:first-child,.footer_top_three>div:first-child{
+			margin: 0 auto;
+			margin-top: 50px;
+			font-size: 14px;
+			/*background-color: pink;*/
+			text-align: center;
+		}
+		/*客户服务*/
+		.footer_top_one{
+			width: 33%;
+			/*flex: 1 20px;*/
+			border-right:1px solid #e9e9e9;
+			/*background-color: yellow;*/
+		}
+		.footer_top_one>div:nth-child(2){
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			margin-top: 25px;
+		}
+		/*在线客服*/
+		.footer_top_one>div:nth-child(2)>div:first-child{
+			/*margin-top: 30px;*/
+			/*margin-left: 100px;*/
+			width: 80px;
+			height: 100px;
+			/*background-color: purple;*/
+			float: left;
+			text-align: center;
+			border: 1px solid #e9e9e9;
+			margin-right: 20px;
+			font-size: 14px;
+			
+		}
+		.footer_top_one>div:nth-child(2)>div:first-child>div{
+			width: 80px;
+			height: 70px;
+			font-size: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		/*用户反馈*/
+		.footer_top_one>div:nth-child(2)>div:last-child{
+			/*margin-top: 30px;*/
+			/*margin-right: 100px;*/
+			width: 80px;
+			height: 100px;
+			/*background-color: purple;*/
+			float: right;
+			text-align: center;
+			border: 1px solid #e9e9e9;
+			font-size: 14px;
+		}
+		.footer_top_one>div:nth-child(2)>div:last-child>div{
+			width: 80px;
+			height: 70px;
+			font-size: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		/*何为严选*/
+		.footer_top_two{
+			width: 33%;
+			/*flex:20px 1 20px;*/
+			border-right:1px solid #e9e9e9;
+			/*background-color: blue;*/
+		}
+		.footer_top_two>div:nth-child(2){
+			margin-top: 20px;
+			padding:10px;
+			font-size: 13px;
+		}
+		.footer_top_two>div:last-child{
+			margin-top: 10px;
+			margin-left: 20px;
+			font-size: 14px;
+		}
+		/*扫码下载严选APP*/
+		.footer_top_three{
+			width: 33%;
+			/*flex:20px 1 ;*/
+			/*background-color: yellow;*/
+		}	
+		.footer_top_three>div:last-child{
+			margin:  auto;
+			text-align: center;
+			margin-top: 30px;
+			/*margin-left: 5px;*/
+			width: 150px;
+			height: 150px;
+			font-size: 12px;
+			color: #B4A078;
+			/*background-color: purple;*/
+		}	
+		.footer_top_three>div:last-child>img{
+			width: 104px;
+			height: 104px;
+		}
+		/*尾部的下方*/
+		.footer_bottom{
+			width: 100%;
+			height: 50%;
+			background: #414141;
+		}
+		/*尾部下方的上半部*/
+		.footer_bottom_top{
+			width: 1090px;
+			height: 40%;
+			/*background-color: red;*/
+			margin:0 auto;
+			display: flex;
+
+			/*position: relative;*/
+		}
+		.footer_bottom_top>div{
+			width: 25%;
+			height: 100%;
+			text-align: center;
+			color: #999999;
+		}
+		.footer_bottom_top_one,.footer_bottom_top_two,.footer_bottom_top_three,.footer_bottom_top_four{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 18px;
+		}
+		.footer_bottom_top_one>span:first-child,.footer_bottom_top_two>span:first-child,.footer_bottom_top_three>span:first-child,.footer_bottom_top_four>span:first-child{
+			font-size: 35px;
+		}
+		.footer_bottom_top_one>span:last-child,.footer_bottom_top_two>span:last-child,.footer_bottom_top_three>span:last-child,.footer_bottom_top_four>span:last-child{
+			color: #ffffff;
+		}
+		/*尾部下方的下半部*/
+		.footer_bottom_bottom{
+			width: 1090px;
+			height: 60%;
+			/*background-color: yellow;*/
+			margin:0 auto;
+			text-align: center;
+			font-size: 12px;
+			color: #999999;
+			border-top:1px solid #999999;
+			padding-top: 30px;
+			line-height: 25px;
+		}
+		.return{
+			width: 72px;
+			height: 60px;
+			position: fixed;
+			right: 0px;
+			bottom: 0px;
+			/*background-color: red;*/
+			text-align: center;
+			font-size: 16px;
+		}
+		.return p{
+			color: #aaa;
+			font-size: 20px;
+			margin-top: 10px;
+		}
+		.return a{
+			color: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<!-- 头部导航 -->
+		<div class="top">
+			<div class="top_left">
+				<u>关于新疆部分地区寄递管控通知</u>
+			</div>
+			<div class="top_right">
+				<ul>
+					<li>&nbsp;登录/注册&nbsp;|</li>
+					<li>&nbsp;我的订单&nbsp;|</li>
+					<li>&nbsp;会员&nbsp;|</li>
+					<li>&nbsp;甄选家&nbsp;|</li>
+					<li>&nbsp;企业采购&nbsp;√&nbsp;&nbsp;|</li>
+					<li>&nbsp;客户服务&nbsp;√&nbsp;&nbsp;|</li>
+					<li>&nbsp;APP</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 搜索栏 -->
+		<div class="header">
+			<div class="header_top">
+				<!-- logo -->
+				<div><img src="网易严选imgs/logo.png"></div>
+				<!-- 购物车 -->		
+				<div class="shopcar">🛒购物车</div>
+				<!-- 搜索框 -->
+				<div>
+					<div ><input class="search_text" type="text" placeholder="🔍月末狂欢最后一天，显示2件85折"></div>
+					
+					<div class="search_button">搜索</div>
+					<div>
+						<span>&nbsp;快递绿色回收 倡议书&nbsp;|</span>
+						<span> &nbsp;网红磨砂膏 买即赠&nbsp;|</span>
+						<span> &nbsp;口罩专区&nbsp;</span>		   
+					</div>
+				</div>
+			</div>
+			<div class="header_bottom">
+				<ul>
+					<li>首页</li>
+					<li>居家生活</li>
+					<li>服饰鞋包</li>
+					<li>美食酒水</li>
+					<li>个户清洁</li>
+					<li>母婴亲子</li>
+					<li>运动旅行</li>
+					<li>数码加电</li>
+					<li>严选全球</li>
+					<li>为你严选</li>
+					<li>众筹</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="image"></div>
+		<!-- 中间内容 -->
+		<div class="content">
+			<div class="content_one">
+				<div class="item">
+					<div class="content_one_top">
+						<div>新品首发</div>
+						<div>为你寻觅世间好物</div>						
+						<div>更多新品&gt;</div>
+					</div>
+					<div class="content_one_bottom">
+						<ul>
+							<li>
+								<div class="content_one_bottom1"></div>
+								<!-- <div><img src="网易严选imgs/xinpin_11.webp"></div> -->
+								<div>
+									<div><span></span>
+									<span>新品限时购</span></div>
+									<div>守护你的发际线，黑芝麻丸<br> 100克</div>
+									<p><span>¥28.9</span>
+									<span>¥29.9</span></p>
+								</div>
+							</li>
+							<li>
+								<div class="content_one_bottom2"></div>
+								<!-- <div><img src="网易严选imgs/xinpin_21.webp"></div> -->
+								<div>
+									<div><span>杭州制造</span>
+									<span>新品限时购</span></div>
+									<div>切丝擦丝切蒜辅食 家用食物<br>多功能料理机</div>
+									<p><span>¥28.9</span>
+									<span>¥29.9</span></p>
+								</div>
+							</li>
+							<li>
+								<div class="content_one_bottom3"></div>
+								<!-- <div><img src="网易严选imgs/xinpin_31.webp"></div> -->
+								<div>
+									<div>
+										<!-- <span></span> -->
+									<span>新品限时购</span></div>
+									<div>万古不易，锁味增鲜 日本万<br>古烧饭釜0.5L</div>
+									<p><span>¥129</span>
+									<span>¥149</span></p>
+								</div>
+							</li>
+							<li>
+								<div class="content_one_bottom4"></div>
+								<!-- <div><img src="网易严选imgs/xinpin_41.webp"></div> -->
+								<div>
+									<div><
+										<!-- span></span> -->
+									<span>新品限时购</span></div>
+									<div>女式可机洗天丝平底鞋</div>
+									<p><span>¥134</span>
+									<span>¥149</span></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content_two">
+				<div class="item">
+					<div class="content_two_top">
+						<div>人气推荐</div>
+						<div>编辑推荐</div>
+						<div>热销总榜</div>
+						<div>更多推荐&gt;</div>
+					</div>
+					<div class="content_two_bottom">
+						<div class="content_two_bottom_left">
+							<img src="网易严选imgs/renqi_1.webp">
+							<div><span>新人特价</span></div>
+							<div>玩趣彩虹四季拖鞋</div>
+							<p>
+								<span>¥134</span>
+								<span>¥149</span>
+							</p>
+						</div>
+						<div class="content_two_bottom_right">
+							<div>
+								<ul>
+									<li>
+										<div><img src="网易严选imgs/renqi_2.webp"></div>
+										<div><span>新人特价</span></div>
+										<div>玩趣彩虹四季拖鞋</div>
+										<p>
+											<span>¥134</span>
+											<span>¥149</span>
+										</p>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/renqi_3.webp"></div>
+										<div><span>新人特价</span></div>
+										<div>玩趣彩虹四季拖鞋</div>
+										<p>
+											<span>¥134</span>
+											<span>¥149</span>
+										</p>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/renqi_4.webp"></div>
+										<div><span>新人特价</span></div>
+										<div>玩趣彩虹四季拖鞋</div>
+										<p>
+											<span>¥134</span>
+											<span>¥149</span>
+										</p>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li>
+										<div><img src="网易严选imgs/renqi_5.webp"></div>
+										<div><span>新人特价</span></div>
+										<div>玩趣彩虹四季拖鞋</div>
+										<p>
+											<span>¥134</span>
+											<span>¥149</span>
+										</p>
+									<li>
+										<div><img src="网易严选imgs/renqi_6.webp"></div>
+										<div><span>新人特价</span></div>
+										<div>玩趣彩虹四季拖鞋</div>
+										<p>
+											<span>¥134</span>
+											<span>¥149</span>
+										</p>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/renqi_7.webp"></div>
+										<div><span>新人特价</span></div>
+										<div>玩趣彩虹四季拖鞋</div>
+										<p>
+											<span>¥134</span>
+											<span>¥149</span>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="content_san">
+				<div class="item">
+					<div class="content_san_top">
+						<div>限时购</div>
+						<div>更多抢购&gt;</div>
+					</div>
+					<div class="content_san_bottom">
+						<div class="content_san_bottom_left"></div>
+						<div class="content_san_bottom_right">
+							<div>
+								<ul>
+									<li>
+										<div><img src="网易严选imgs/xianshi_2.png"></div>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/xianshi_3.png"></div>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li>
+										<div><img src="网易严选imgs/xianshi_4.png"></div>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/xianshi_5.png"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="content_three">
+				<div class="item">
+					<div class="content_three_top">
+						<div>福利社</div>
+						<div>查看全部福利&gt;</div>
+					</div>
+					<div class="content_three_bottom">
+						<div class="content_three_bottom_left"><img src="网易严选imgs/fuli_1.webp"></div>
+						<div class="content_three_bottom_right">
+							<div>
+								<ul>
+									<li>
+										<div><img src="网易严选imgs/fuli_2.png"></div>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/fuli_3.png"></div>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li>
+										<div><img src="网易严选imgs/fuli_4.png"></div>
+									</li>
+									<li>
+										<div><img src="网易严选imgs/fuli_5.png"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="content_four">
+				<div class="item">
+					<div class="content_four_top">
+						<div>居家生活</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>口碑好物<span>/</span></li>
+								<li>主题床品<span>/</span></li>
+								<li>抑菌防螨<span>/</span></li>
+								<li>春夏好物<span>/</span></li>
+								<li>北欧原木<span>/</span></li>
+								<li>餐厨爆款清单<span>/</span></li>
+								<li>床品件套</li>
+							</ul>
+						</div>											
+					</div>
+					<div class="content_four_bottom">
+						<div class="content_four_bottom_top"></div>
+						<div class="content_four_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/jujia_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>樱之梦会变色的小胖喵 耐热玻璃把手杯</div>
+										<p><span>￥49</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/jujia_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>AB面乳胶独立弹簧床垫 升级款</div>
+										<p><span>￥2599</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/jujia_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>烹饪样样精通 珠光黄铸铁珐琅锅22cm</div>
+										<p><span>￥288</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/jujia_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>日式全棉格纹四件套 新款</div>
+										<p><span>￥239</span></p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_five">
+				<div class="item">
+					<div class="content_five_top">
+						<div>服饰鞋包</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>热销爆款<span>/</span></li>
+								<li>好物上新<span>/</span></li>
+								<li>抄底特惠<span>/</span></li>
+								<li>男士衬衫<span>/</span></li>
+								<li>男士针织衫/卫衣<span>/</span></li>
+								<li>男式外套<span>/</span></li>
+								<li>男士牛仔</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="content_five_bottom">
+						<div class="content_five_bottom_top"></div>
+						<div class="content_five_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/fushi_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>可甜可帅气，女式基础弹力紧身打底裤</div>
+										<p><span>￥99.9</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/fushi_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>女式天丝棉柔中腰小脚裤</div>
+										<p><span>￥109</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/fushi_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>【丁磊直播款】男式四面弹牛仔裤</div>
+										<p><span>￥229</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/fushi_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>男式无缝休闲运动T恤</div>
+										<p><span>￥49</span></p>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_six">
+				<div class="item">
+					<div class="content_six_top">
+						<div>美食酒水</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>夏日轻食<span>/</span></li>
+								<li>7月推荐<span>/</span></li>
+								<li>美味上新<span>/</span></li>
+								<li>员工精选<span>/</span></li>
+								<li>饼干糕点<span>/</span></li>
+								<li>小食糖巧<span>/</span></li>
+								<li>肉类零食</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="content_six_bottom">
+						<div class="content_six_bottom_top"></div>
+						<div class="content_six_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/meishi_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>每日坚果亚麻籽谷物燕麦片 600克</div>
+										<p><span>￥58</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/meishi_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>新鲜燕窝仙女喝，30%即食<br>燕窝 70克*6瓶</div>
+										<p><span>￥239</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/meishi_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>大块酥松，酸奶草莓奇亚籽谷物燕麦片 600克</div>
+										<p><span>￥52.8</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/meishi_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>大丈夫冻干牛肉面</div>
+										<p><span>￥29</span></p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_seven">
+				<div class="item">
+					<div class="content_seven_top">
+						<div>个护清洁</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>爆款榜单<span>/</span></li>
+								<li>新品尝鲜<span>/</span></li>
+								<li>基础护肤<span>/</span></li>
+								<li>卸妆洁面<span>/</span></li>
+								<li>护肤工具<span>/</span></li>
+								<li>洗发护发<span>/</span></li>
+								<li>身体护理</li>
+							</ul>
+						</div>						
+					</div>
+					<div class="content_seven_bottom">
+						<div class="content_seven_bottom_top"></div>
+						<div class="content_seven_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/gehu_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>性价比首选 洁齿亮白声波式震动电动牙刷</div>
+										<p><span>￥139</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/gehu_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>体外敏感刺激，春风亲亲鸭吸吮式按摩器</div>
+										<p><span>￥349</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/gehu_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>养出“宛如天生”素颜肌 活颜保湿乳 120ml</div>
+										<p><span>￥109</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/gehu_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>笑容由“齿”绽放 沁爽舒缓/洁白炫彩牙膏</div>
+										<p><span>￥11.8</span></p>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_eight">
+				<div class="item">
+					<div class="content_eight_top">
+						<div>母婴亲子</div>						
+						<div>查看更多&gt;</div>
+						<div>
+							<ul>
+								<li>万千宝妈最爱<span>/</span></li>
+								<li>清爽一夏<span>/</span></li>
+								<li>新品飙升榜<span>/</span></li>
+								<li>低至3折<span>/</span></li>
+								<li>尿裤纸品<span>/</span></li>
+								<li>洗护<span>/</span></li>
+								<li>喂养</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content_eight_bottom">
+						<div class="content_eight_bottom_top"></div>
+						<div class="content_eight_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/muying_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>薄至2.5mm，海量鲸吸婴儿纸尿裤尿不湿</div>
+										<p><span>￥69</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/muying_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>黑科技护脊，儿童轻便减负书包 1-3年级</div>
+										<p><span>￥299</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/muying_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>【3-16岁】儿童智能电子琴</div>
+										<p><span>￥1699</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/muying_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>【3-6岁】敏感宝宝肌可用，日本乳霜纸巾 100抽</div>
+										<p><span>￥69</span></p>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_nine">
+				<div class="item">
+					<div class="content_nine_top">
+						<div>运动旅行</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>爆款指南<span>/</span></li>
+								<li>推荐新品<span>/</span></li>
+								<li>减脂必备<span>/</span></li>
+								<li>乐享旅途<span>/</span></li>
+								<li>男式运动T恤<span>/</span></li>
+								<li>男士运动外套/卫衣<span>/</span></li>
+								<li>男式运动裤装</li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="content_nine_bottom">
+						<div class="content_nine_bottom_top"></div>
+						<div class="content_nine_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/yundong_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>一锤轻松，高颜值轻羽筋膜按摩仪</div>
+										<p><span>￥643</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/yundong_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>切尔西短款雨靴</div>
+										<p><span>￥69</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/yundong_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>男式无缝休闲运动T恤</div>
+										<p><span>￥49.9</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/yundong_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>蒸汽热敷眼罩</div>
+										<p><span>￥35.5</span></p>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_ten">
+				<div class="item">
+					<div class="content_ten_top">
+						<div>数码家电</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>应季推荐<span>/</span></li>
+								<li>新品首发<span>/</span></li>
+								<li>甄选爆款<span>/</span></li>
+								<li>清洁电器<span>/</span></li>
+								<li>两季电器<span>/</span></li>
+								<li>衣物护理<span>/</span></li>
+								<li>空气调节</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content_ten_bottom">
+						<div class="content_ten_bottom_top"></div>
+						<div class="content_ten_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/shuma_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>出差旅行酒店喝上放心水，折叠电水壶</div>
+										<p><span>￥289</span></p>
+									</div>
+
+								</li>
+								<li>
+									<div><img src="网易严选imgs/shuma_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>热豆浆鲜果汁分杯不串味 多功能破壁机</div>
+										<p><span>￥699</span></p>
+									</div>
+
+								</li>
+								<li>
+									<div><img src="网易严选imgs/shuma_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>不易打湿地板，落地式多用超声波加湿器</div>
+										<p><span>￥239</span></p>
+									</div>
+
+								</li>
+								<li>
+									<div><img src="网易严选imgs/shuma_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>小巧轻便，便携手持挂烫机（1000W）</div>
+										<p><span>￥79</span></p>
+									</div>
+
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_eleven">
+				<div class="item">
+					<div class="content_eleven_top">
+						<div>严选全球</div>
+						<div>查看更多&gt;</div>	
+						<div>
+							<ul>
+								<li>夏日新品<span>/</span></li>
+								<li>应季防护<span>/</span></li>
+								<li>床品家纺<span>/</span></li>
+								<li>餐厨用品<span>/</span></li>
+								<li>日用百货<span>/</span></li>
+								<li>家清用品<span>/</span></li>
+								<li>营养保健</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content_eleven_bottom">
+						<div class="content_eleven_bottom_top"></div>
+						<div class="content_eleven_bottom_bottom">
+							<ul>
+								<li>
+									<div><img src="网易严选imgs/yanxuan_11.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>睡着按摩颈椎 泰国93%含量天然乳胶枕</div>
+										<p><span>￥159</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/yanxuan_21.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>吸走倦怠感 日本天然草本足贴4味可选20片装</div>
+										<p><span>￥69</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/yanxuan_31.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>惊奇队长 呼叫器软胶钥匙扣 漫威</div>
+										<p><span>￥25s</span></p>
+									</div>
+								</li>
+								<li>
+									<div><img src="网易严选imgs/yanxuan_41.webp"></div>
+									<div>
+										<div><span>每满300减45券</span></div>
+										<div>伊利丹 夜光套头卫衣 魔兽世界</div>
+										<p><span>￥299</span></p>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_twelve">
+				<div class="item">
+					<div class="content_twelve_top">
+						<div>甄选家</div>
+						<div>我们在寻找，对生活有态度的你</div>
+					</div>
+					<div class="content_twelve_bottom">
+						<div class="content_twelve_bottom_left"></div>
+						<div class="content_twelve_bottom_right">
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="content_thirteen">
+				<div class="item">
+					<div class="content_thirteen_top">
+						<div>大家都在说</div>
+						<div>生活，没有统一标准</div>
+					</div>
+					<div class="content_thirteen_bottom"></div>
+				</div>
+			</div> -->
+		</div>
+		<!-- 尾部 -->
+		<div class="footer">
+			<div class="footer_top">
+				<div class="footer_top_one">
+					<div>客户服务</div>
+					<div>
+						<div>
+							<div>🎧</div>
+							<p>在线客服</p>
+						</div>
+						<div>
+							<div>💬</div>
+							<p>在线客服</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer_top_two">
+					<div>何为严选</div>
+					<div>网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品</div>
+					<div>关注我们：严选 、微信 、 微博</div>
+				</div>
+				<div class="footer_top_three">
+						<div>扫码下载严选APP</div>
+						<div>
+							<img src="网易严选imgs/erweima.png">
+							<p>下载领大额新人红包</p>
+						</div>
+						
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="footer_bottom_top">
+					<div class="footer_bottom_top_one">
+						<span>⚪</span>
+						<span>网易自营电商</span>
+					</div>
+					<div class="footer_bottom_top_two">
+						<span>⚪</span>
+						<span>30天无忧退换货</span>
+					</div>
+					<div class="footer_bottom_top_three">
+						<span>⚪</span>
+						<span>满99免邮费</span>
+					</div>
+					<div class="footer_bottom_top_four">
+						<span>⚪</span>
+						<span>品质保证</span>
+					</div>
+				</div>
+				<div class="footer_bottom_bottom">
+					关于我们&nbsp;|&nbsp;帮助中心&nbsp;|&nbsp;售后服务&nbsp;|&nbsp;配送与验收&nbsp;|&nbsp;商务合作&nbsp;|&nbsp;企业采购&nbsp;|&nbsp;开放平台&nbsp;|&nbsp;搜索推荐&nbsp;|&nbsp;友情链接&nbsp;|&nbsp;廉正举报<br>
+					食品经营许可证：JY13301080111719 &nbsp;&nbsp; 出版物经营许可证：新出发滨字第0132号&nbsp;&nbsp;妙得ICP证号：ICP 证浙B2-20160106&nbsp;&nbsp;浙杭食药监械经营备20171029号&nbsp;&nbsp;
+					营业执照&nbsp;&nbsp;网易公司版权所有 © 1997-2020<br>
+					无线电发射设备销售备案：42202011096855&nbsp;&nbsp; （浙杭）网械企备字[2019]第00119号&nbsp;&nbsp; （粤）网械平台备字（2019）第00004号&nbsp;&nbsp; （粤）-非经营性-2016-0023 <br>
+					浙江省网络食品销售第三方平台提供者备案：浙网食A33010009 &nbsp;&nbsp;  单用途商业预付卡备案证：330100AAC0024 
+				</div>
+			</div>
+		</div>
+		<!-- 返回顶部 -->
+		<div class="return">
+			<p>︿</p>
+			<a href="#" style="position:fixed;right:0;bottom:0" target="_selfs">回到顶部</a>
+		</div>
+	</div>
+</body>
+</html>
